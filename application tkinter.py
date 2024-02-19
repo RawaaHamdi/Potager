@@ -30,14 +30,14 @@ class SensorApp:
         self.canvas.pack()
 
         # Charger et afficher l'image d'arrière-plan à droite avec une taille réduite
-        self.background_image = load_and_resize_image("C:/Users/rabou/Desktop/projetdomo/sphère-1024x1024.png", 400, 300)  # Réduire la taille de l'image
+        self.background_image = load_and_resize_image("C:/Users/rabou/Desktop/projetdomo/image d'une plante.png", 400, 300)  # Réduire la taille de l'image
         self.canvas.create_image(400, 0, anchor=tk.NW, image=self.background_image)  # Déplacer vers la droite
 
         # Images des capteurs
-        self.temperature_icon = load_and_resize_image("C:/Users/rabou/Desktop/projetdomo/578113.png", 50, 50)  # Modifier le chemin en conséquence
+        self.temperature_icon = load_and_resize_image("C:/Users/rabou/Desktop/projetdomo/image temperature.png", 50, 50)  # Modifier le chemin en conséquence
         self.humidity_icon = load_and_resize_image("C:/Users/rabou/Desktop/projetdomo/humidity_wather_16790.png", 50, 50)  # Modifier le chemin en conséquence
-        self.luminosity_icon = load_and_resize_image("C:/Users/rabou/Desktop/projetdomo/téléchargement.png", 50, 50)  # Modifier le chemin en conséquence
-        self.ntc_icon = load_and_resize_image("C:/Users/rabou/Desktop/projetdomo/téléchargement.jpg", 50, 50)  # Modifier le chemin en conséquence
+        self.luminosity_icon = load_and_resize_image("C:/Users/rabou/Desktop/projetdomo/image du lumiére.png", 50, 50)  # Modifier le chemin en conséquence
+        self.ntc_icon = load_and_resize_image("C:/Users/rabou/Desktop/projetdomo/RTC Image.jpg", 50, 50)  # Modifier le chemin en conséquence
 
         # Labels pour afficher les données des capteurs avec texte blanc
         self.label_temperature = tk.Label(master, text="Température: ", font=("Helvetica", 14), fg=TEXT_COLOR, bg=BACKGROUND_COLOR, compound=tk.LEFT, image=self.temperature_icon)
