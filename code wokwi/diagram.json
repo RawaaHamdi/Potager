@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "author": "AMANI RABOUDI",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp1", "top": -14.5, "left": 52.6, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -114.9, "left": 225, "attrs": {} },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr1", "top": 233.6, "left": -28, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": 113.2, "left": 249.6, "attrs": {} },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": -83.8,
+      "left": -115.8,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [
+      "dht1:VCC",
+      "esp1:VIN",
+      "red",
+      [ "v0", "h-76.8", "v0", "h0", "v-67.2", "h-124.8", "v163.2" ]
+    ],
+    [ "dht1:GND", "esp1:GND.1", "black", [ "v86.4", "h-124.8" ] ],
+    [ "dht1:SDA", "esp1:D15", "green", [ "v76.8", "h-105.5" ] ],
+    [ "ldr1:GND", "esp1:GND.1", "black", [ "h19.2", "v-96.4" ] ],
+    [ "ldr1:VCC", "esp1:3V3", "red", [ "h0" ] ],
+    [
+      "ldr1:AO",
+      "esp1:D35",
+      "green",
+      [ "h0", "v37.7", "h0", "v0", "h-172.8", "v-19.2", "h0", "v0" ]
+    ],
+    [ "servo1:PWM", "esp1:D18", "green", [ "h-19.2", "v0.2" ] ],
+    [ "servo1:GND", "esp1:D23", "black", [ "h-57.6", "v-201.6" ] ],
+    [ "ntc1:GND", "esp1:GND.2", "black", [ "h28.8", "v192" ] ],
+    [ "ntc1:VCC", "esp1:VIN", "red", [ "h9.6", "v192" ] ],
+    [ "ntc1:OUT", "esp1:D34", "green", [ "h0", "v76.7" ] ],
+    [ "servo1:V+", "esp1:3V3", "green", [ "h-76.8", "v-28.7" ] ]
+  ],
+  "dependencies": {}
+}
